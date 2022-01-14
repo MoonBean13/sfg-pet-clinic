@@ -64,20 +64,16 @@
 		</plugins>
 	</build>
 
-	<!-- <scm>
-		<developerConnection>
-			scm:git:git://github.com/MoonBean13/sfg-pet-clinic.git
-		</developerConnection>
-		<tag>HEAD</tag>
-	</scm> -->
+	<!-- <scm> <developerConnection> scm:git:git://github.com/MoonBean13/sfg-pet-clinic.git 
+		</developerConnection> <tag>HEAD</tag> </scm> -->
 
 	<scm>
-		<connection>scm:git:git@github.com:MoonBean13/sfg-pet-clinic.git
+		<connection>scm:git:https://github.com/MoonBean13/sfg-pet-clinic.git
 		</connection>
-		<developerConnection>scm:git:git@github.com:MoonBean13/sfg-pet-clinic.git
+		<developerConnection>scm:git:https://github.com/MoonBean13/sfg-pet-clinic.git
 		</developerConnection>
+		<url>https://github.com/MoonBean13/sfg-pet-clinic</url>
 		<tag>HEAD</tag>
-		<url>http://github.com/MoonBean13/sfg-pet-clinic</url>
 	</scm>
 
 </project>
