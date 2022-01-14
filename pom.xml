@@ -4,31 +4,36 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.5</version>
-		<relativePath /> <!-- lookup parent from repository -->
-	</parent>
-
 	<groupId>moon.springframework</groupId>
 	<artifactId>sfg-pet-clinic</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
-
-	<packaging>pom</packaging>
-
-	<name>sfg-pet-clinic</name>
-	<description>SFG Pet Clinic Project</description>
 
 	<modules>
 		<module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
 	</modules>
 
+	<packaging>pom</packaging>
+
+	<name>sfg-pet-clinic</name>
+	<description>SFG Pet Clinic Project</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.2</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8
+		</project.reporting.outputEncoding>
 		<java.version>11</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
+
 	<dependencies>
 
 	</dependencies>
@@ -47,7 +52,23 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<goals>install</goals>
+					<!-- every module gets the same version as the parent POM -->
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+
+	<scm>
+		<developerConnection>
+			scm:git:git@github.com:MoonBean13/sfg-pet-clinic.git
+		</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 </project>
