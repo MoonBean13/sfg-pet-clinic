@@ -64,9 +64,9 @@
 		</plugins>
 	</build>
 
-	<scm> 
+	<scm>
 		<developerConnection>
-		scm:git:git@github.com:MoonBean13/sfg-pet-clinic.git
+			scm:git:git@github.com:MoonBean13/sfg-pet-clinic.git
 		</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
