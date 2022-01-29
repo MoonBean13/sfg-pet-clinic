@@ -2,9 +2,12 @@ package moon.springframework.sfgpetclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import moon.springframework.sfgpetclinic.model.Owner;
 import moon.springframework.sfgpetclinic.services.OwnerService;
 
+@Service
 public class OwnerServiceMap extends AbstracMapService<Owner, Long> implements OwnerService {
 
 	@Override
