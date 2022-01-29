@@ -3,9 +3,9 @@ package moon.springframework.sfgpetclinic.services.map;
 import java.util.Set;
 
 import moon.springframework.sfgpetclinic.model.Vet;
-import moon.springframework.sfgpetclinic.services.CrudService;
+import moon.springframework.sfgpetclinic.services.VetService;
 
-public class VetServiceMap extends AbstracMapService<Vet, Long> implements CrudService<Vet, Long>{
+public class VetServiceMap extends AbstracMapService<Vet, Long> implements VetService {
 
 	@Override
 	public Set<Vet> findAll() {
